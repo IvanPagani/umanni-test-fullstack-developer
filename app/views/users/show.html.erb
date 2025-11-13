@@ -1,0 +1,15 @@
+<h2>Your Profile</h2>
+
+<% if @user.avatar.attached? %>
+  <%= image_tag @user.avatar, class: "avatar-image" %>
+<% else %>
+  <%= image_tag "default-avatar.png", class: "avatar-image" %>
+<% end %><br />
+
+<p><strong>Name:</strong> <%= @user.full_name %></p>
+<p><strong>Email:</strong> <%= @user.email %></p>
+
+<% if current_user.admin? || current_user == @user %>
+  <%= link_to "Edit Profile", edit_user_registration_path %><br />
+  <%#= link_to "Delete Profile", user_path(@user), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?", turbo_method: :delete } %>
+<% end %>
