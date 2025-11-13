@@ -1,0 +1,20 @@
+<h2>Dashboard</h2>
+
+<p><strong>User:</strong> <%= current_user.full_name %></p>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td>Admin Users</td>
+      <td><%= @total_admins %></td>
+    </tr>
+    <tr>
+      <td>Regular Users</td>
+      <td><%= @total_regulars %></td>
+    </tr>
+    <tr>
+      <td><strong>Total Users</strong></td>
+      <td><strong><%= @total_users %></strong></td>
+    </tr>
+  </tbody>
+</table><br />
