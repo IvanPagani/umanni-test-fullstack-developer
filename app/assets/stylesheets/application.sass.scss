@@ -1,14 +1,41 @@
 // Entry point for your Sass build
 
+@use "devise.sass.scss";
+@use "sass:color";
+
 $primary-color: #007bff;
-$danger-color: #dc3545;
+$danger-color: #e61429;
 $success-color: #28a745;
-$navbar-bgc: #f3f3f3;
+$navbar-bgc: #ffffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
+  background-color: #f5f7fa;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 10px;
+}
+
+.links {
+  margin-top: 0.5rem;
+  // text-align: center;
+
+  a {
+    color: #001aff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.5s;
+
+    &:hover {
+      color: color.scale(#00a6ff, $lightness: -20%);
+      text-decoration: underline;
+    }
+  }
 }
 
 .notice {
@@ -26,6 +53,8 @@ body {
   padding: 10px;
   margin: 15px 0;
   background: $navbar-bgc;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 10%);
 }
 
 .avatar-image {
