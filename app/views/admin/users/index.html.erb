@@ -28,13 +28,16 @@
         </td>
         <td><%= user.full_name %></td>
         <td><%= user.email %></td>
-        <td><%= user.admin? ? "Admin" : "User" %></td>
+        <td><%= user.admin? ? "🥷" : "👤" %></td>
         <td class="links">
           <%= link_to "View", admin_user_path(user) %>
           <%= link_to "Edit", edit_admin_user_path(user) %>
           <%= link_to "Delete", admin_user_path(user), 
                 data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?", 
                 turbo_method: :delete } %>
+          <%= link_to (user.admin? ? "Make User" : "Make Admin"), toggle_role_admin_user_path(user),
+                data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?",
+                turbo_method: :patch } %>
         </td>
       </tr>
     <% end %>

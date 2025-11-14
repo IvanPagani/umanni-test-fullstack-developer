@@ -41,6 +41,11 @@ class Admin::UsersController < ApplicationController
     redirect_to admin_users_path, notice: "User deleted."
   end
 
+  def toggle_role
+    @user.update(admin: !@user.admin)
+    redirect_to admin_users_path, notice: "User role updated."
+  end
+
   private
 
   def set_user
