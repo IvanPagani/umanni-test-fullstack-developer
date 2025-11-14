@@ -4,6 +4,11 @@
   <%= link_to "Create User", new_admin_user_path %><br /><br />
 </div>
 
+<%= form_with url: import_admin_users_path, method: :post, local: true do |f| %>
+  <%= f.file_field :file, accept: "text/csv" %><br />
+  <%= f.button "Import CSV file"%>
+<% end %><br /><br />
+
 <table class="table">
   <thead>
     <tr>

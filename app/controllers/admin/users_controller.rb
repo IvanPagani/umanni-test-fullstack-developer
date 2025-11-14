@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :authorize_admin!
-  before_action :set_user, except: [ :index, :new, :create ]
+  before_action :set_user, except: [ :index, :new, :create, :import ]
 
   def index
     # @users = User.all.order(admin: :desc)
@@ -46,6 +46,14 @@ class Admin::UsersController < ApplicationController
     redirect_to admin_users_path, notice: "User role updated."
   end
 
+  def import
+    file = params[:file]
+    return unless validate_import_file(file)
+
+    CsvImportUsersService.new.call(file)
+    redirect_to admin_users_path, notice: "File imported successfully."
+  end
+
   private
 
   def set_user
@@ -68,5 +76,21 @@ class Admin::UsersController < ApplicationController
     end
 
     user_params
+  end
+
+  ALLOWED_CONTENT_TYPES = [ "text/csv" ].freeze
+
+  def validate_import_file(file)
+    if file.blank?
+      redirect_to admin_users_path, alert: "Please choose a file to upload."
+      return false
+    end
+
+    unless ALLOWED_CONTENT_TYPES.include?(file.content_type)
+      redirect_to admin_users_path, alert: "Only CSV files are allowed."
+      return false
+    end
+
+    true
   end
 end

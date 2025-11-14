@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
     valid_types = [ "image/png", "image/jpg", "image/jpeg" ]
     unless avatar.content_type.in?(valid_types)
-      errors.add(:avatar, "Avatar must be a PNG, JPG, or JPEG")
+      errors.add(:avatar, "must be a PNG, JPG, or JPEG")
     end
 
     if avatar.byte_size > 5.megabytes
