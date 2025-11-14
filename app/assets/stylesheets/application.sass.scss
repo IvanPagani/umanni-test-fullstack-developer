@@ -3,10 +3,12 @@
 @use "devise.sass.scss";
 @use "sass:color";
 
-$primary-color: #007bff;
-$danger-color: #e61429;
+$primary-color: #001aff;
+$secondary-color: #00ccff;
+$primary-bgc: #f5f7fa;
+$secondary-bgc: #ffffff;
 $success-color: #28a745;
-$navbar-bgc: #ffffff;
+$danger-color: #e61429;
 
 * {
   margin: 0;
@@ -15,10 +17,31 @@ $navbar-bgc: #ffffff;
 }
 
 body {
-  background-color: #f5f7fa;
+  background-color: $primary-bgc;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 15px 0;
+  background: $secondary-bgc;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 10%);
+}
+
+.avatar-image {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.errors {
+  color: $danger-color;
 }
 
 .links {
@@ -26,13 +49,13 @@ body {
   // text-align: center;
 
   a {
-    color: #001aff;
+    color: $primary-color;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.5s;
 
     &:hover {
-      color: color.scale(#00a6ff, $lightness: -20%);
+      color: color.scale($secondary-color, $lightness: -20%);
       text-decoration: underline;
     }
   }
@@ -44,21 +67,4 @@ body {
 
 .alert {
   color: $danger-color;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 15px 0;
-  background: $navbar-bgc;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 10%);
-}
-
-.avatar-image {
-  width: 50px;
-  height: auto;
-  border-radius: 50%;
 }

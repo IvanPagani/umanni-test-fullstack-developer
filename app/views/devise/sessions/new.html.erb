@@ -5,11 +5,19 @@
     <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+      <% @user.errors.full_messages_for(:email).each do |message| %>
+        <div class="errors"><small><%= message %></small></div>
+      <% end %>
     </div>
 
     <div class="field">
       <%= f.label :password %>
       <%= f.password_field :password, autocomplete: "current-password" %>
+
+      <% @user.errors.full_messages_for(:password).each do |message| %>
+        <div class="errors"><small><%= message %></small></div>
+      <% end %>
     </div>
 
     <% if devise_mapping.rememberable? %>

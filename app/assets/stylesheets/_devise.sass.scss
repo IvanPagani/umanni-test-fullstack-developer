@@ -69,12 +69,11 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    cursor: pointer;
 
     label {
-      cursor: pointer;
+      // cursor: pointer;
       color: #002b5b;
-      font-weight: 500;
+      font-weight: bold;
     }
 
     input[type="checkbox"] {
@@ -104,25 +103,5 @@
         background-color: color.scale(#fc5858, $lightness: -20%);
       }
     }
-  }
-
-  .alert,
-  .notice {
-    text-align: center;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    padding: 0.8rem 1rem;
-    border-radius: 0.75rem;
-    font-weight: 500;
-  }
-
-  .alert {
-    background-color: #ffe6e6;
-    color: #c00;
-  }
-
-  .notice {
-    background-color: #e7f3ff;
-    color: #002b5b;
   }
 }
