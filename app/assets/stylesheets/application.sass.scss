@@ -7,6 +7,7 @@ $primary-color: #001aff;
 $secondary-color: #00ccff;
 $primary-bgc: #f5f7fa;
 $secondary-bgc: #ffffff;
+$progress-bar-color: #ffd900;
 $success-color: #28a745;
 $danger-color: #e61429;
 
@@ -40,8 +41,10 @@ body {
   border-radius: 50%;
 }
 
-.errors {
-  color: $danger-color;
+.turbo-progress-bar {
+  height: 10px;
+  background-color: $progress-bar-color;
+  margin: 0 10px;
 }
 
 .links {
@@ -66,5 +69,9 @@ body {
 }
 
 .alert {
+  color: $danger-color;
+}
+
+.errors {
   color: $danger-color;
 }
