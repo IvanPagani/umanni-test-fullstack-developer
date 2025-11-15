@@ -18,7 +18,7 @@ class Admin::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to admin_users_path, notice: "User created."
+      redirect_to admin_users_path(page: params[:page]), notice: "User created."
     else
       puts @user.errors.full_messages
       render :new, status: :unprocessable_entity
@@ -30,7 +30,7 @@ class Admin::UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to admin_users_path, notice: "User updated."
+      redirect_to admin_users_path(page: params[:page]), notice: "User updated."
     else
       render :edit, status: :unprocessable_entity
     end
@@ -38,12 +38,12 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to admin_users_path, notice: "User deleted."
+    redirect_to admin_users_path(page: params[:page]), notice: "User deleted."
   end
 
   def toggle_role
     @user.update(admin: !@user.admin)
-    redirect_to admin_users_path, notice: "User role updated."
+    redirect_to admin_users_path(page: params[:page]), notice: "User role updated."
   end
 
   def import
@@ -51,7 +51,7 @@ class Admin::UsersController < ApplicationController
     return unless validate_import_file(file)
 
     CsvImportUsersService.new.call(file)
-    redirect_to admin_users_path, notice: "File imported successfully."
+    redirect_to admin_users_path(page: params[:page]), notice: "File imported successfully."
   end
 
   private
@@ -82,12 +82,12 @@ class Admin::UsersController < ApplicationController
 
   def validate_import_file(file)
     if file.blank?
-      redirect_to admin_users_path, alert: "Please choose a file to upload."
+      redirect_to admin_users_path(page: params[:page]), alert: "Please choose a file to upload."
       return false
     end
 
     unless ALLOWED_CONTENT_TYPES.include?(file.content_type)
-      redirect_to admin_users_path, alert: "Only CSV files are allowed."
+      redirect_to admin_users_path(page: params[:page]), alert: "Only CSV files are allowed."
       return false
     end
 
