@@ -69,7 +69,7 @@ RSpec.describe "Admin::UsersController", type: :request do
           password: ""
         }
       }
-      expect(response).to have_http_status(:unprocessable_entity)
+      expect(response).to have_http_status(:unprocessable_content)
     end
   end
 
@@ -98,7 +98,7 @@ RSpec.describe "Admin::UsersController", type: :request do
       patch admin_user_path(user), params: {
         user: { email: "" }
       }
-      expect(response).to have_http_status(:unprocessable_entity)
+      expect(response).to have_http_status(:unprocessable_content)
     end
   end
 

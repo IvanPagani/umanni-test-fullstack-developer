@@ -2,6 +2,7 @@ class CsvImportUsersService
   require "csv"
 
   def call(file)
+    file.rewind
     csv = CSV.parse(file.read, headers: true)
 
     csv.each do |row|

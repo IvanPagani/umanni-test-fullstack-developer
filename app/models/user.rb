@@ -20,7 +20,7 @@ class User < ApplicationRecord
     end
 
     if avatar.byte_size > 5.megabytes
-      errors.add(:avatar, "Maximum size allowed is 5MB")
+      errors.add(:avatar, "maximum size allowed is 5MB")
     end
   end
 end

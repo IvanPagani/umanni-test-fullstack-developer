@@ -8,7 +8,7 @@ class Admin::DashboardController < ApplicationController
     @total_regulars = User.where(admin: false).count
   end
 
-   private
+  private
 
   def authorize_admin!
     redirect_to root_path, alert: "Access denied." unless current_user.admin?
