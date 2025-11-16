@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def authorize_admin!
+    redirect_to root_path, alert: "Access denied." unless current_user.admin?
+  end
+
   def devise_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [ :full_name, :avatar ])
     devise_parameter_sanitizer.permit(:account_update, keys: [ :full_name, :avatar ])

@@ -8,10 +8,6 @@ class UsersController < ApplicationController
 
   private
 
-  def set_user
-    @user = User.find(params[:id])
-  end
-
   def authorize_user!
     unless current_user.admin? || current_user == @user
       redirect_to root_path, alert: "Access denied."

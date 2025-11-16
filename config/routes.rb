@@ -9,15 +9,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :dashboard, only: [ :index ]
-
-    resources :users do
-      member do
-        patch :toggle_role
-      end
-      collection do
-        post :import
-      end
-    end
+    resources :users
+    resources :roles, only: [ :update ]
+    resources :user_imports, only: [ :create ]
   end
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

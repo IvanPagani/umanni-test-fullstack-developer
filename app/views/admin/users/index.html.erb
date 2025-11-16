@@ -5,7 +5,7 @@
     <%= link_to "Create User", new_admin_user_path(page: params[:page]) %><br /><br />
   </div>
 
-  <%= form_with url: import_admin_users_path(page: params[:page]),
+  <%= form_with url: admin_user_imports_path(page: params[:page]),
         method: :post, local: true do |f| %>
     <div class="field">
       <%= f.label "Import Users"%>
@@ -50,7 +50,7 @@
                   data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?", 
                   turbo_method: :delete } %>
             <%= link_to (user.admin? ? "Make User" : "Make Admin"),
-                  toggle_role_admin_user_path(user, page: params[:page]),
+                  admin_role_path(user, page: params[:page]),
                   data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?",
                   turbo_method: :patch } %>
           </td>
