@@ -19,6 +19,11 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips postgresql-client && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+# Install Node.js and Yarn
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs && \
+    npm install --global yarn
+
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \

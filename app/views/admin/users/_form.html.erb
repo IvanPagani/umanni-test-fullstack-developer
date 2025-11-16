@@ -1,4 +1,4 @@
-<div class="devise-container"> 
+<div class="form-container"> 
     <h2><%= @user.persisted? ? "Edit User" : "Create User" %></h2>
 
     <%= form_with model: [:admin, @user], local: true, multipart: true do |f| %>

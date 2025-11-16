@@ -1,14 +1,18 @@
-<h2><%= @user.full_name %> Profile</h2>
+<div class="profile-container">
+  <h2><%= @user.full_name %> Profile</h2>
 
-<% if @user.avatar.attached? %>
-  <%= image_tag(@user.avatar, class: "avatar-image") %>
-<% else %>
-    <%= image_tag "default-avatar.png", class: "avatar-image" %>
-<% end %><br />
+  <div class="profile-avatar">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @user.avatar, class: "avatar-image" %>
+    <% else %>
+      <%= image_tag "default-avatar.png", class: "avatar-image" %>
+    <% end %>
+  </div>
 
-<p><strong>Name:</strong> <%= @user.full_name %></p>
-<p><strong>Email:</strong> <%= @user.email %></p>
+  <p class="profile-field"><strong>Name:</strong> <%= @user.full_name %></p>
+  <p class="profile-field"><strong>Email:</strong> <%= @user.email %></p>
 
-<div class="links">
-  <%= link_to "Back", request.referer || root_path %>
+  <div class="links"><br />
+    <%= link_to "Back", request.referer || root_path %>
+  </div>
 </div>

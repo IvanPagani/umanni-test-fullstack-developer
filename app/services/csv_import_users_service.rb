@@ -16,7 +16,6 @@ class CsvImportUsersService
       }
 
       User.create(user_hash)
-      # binding.irb
     end
   end
 end

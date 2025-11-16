@@ -1,15 +1,20 @@
 // Entry point for your Sass build
 
-@use "devise.sass.scss";
+@use "form.sass.scss";
+@use "table.sass.scss";
+@use "profile.sass.scss";
+@use "info.sass.scss";
+@use "landing.sass.scss";
 @use "sass:color";
 
 $primary-color: #001aff;
-$secondary-color: #00ccff;
+$secondary-color: #007bff;
 $primary-bgc: #f5f7fa;
 $secondary-bgc: #ffffff;
 $progress-bar-color: #ffd900;
 $success-color: #28a745;
-$danger-color: #e61429;
+$attention-color: #e61429;
+$shadow-blue: #06193047;
 
 * {
   margin: 0;
@@ -20,7 +25,6 @@ $danger-color: #e61429;
 body {
   background-color: $primary-bgc;
   font-family: Arial, sans-serif;
-  margin: 0;
   padding: 10px;
 }
 
@@ -29,16 +33,22 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 15px 0;
   background: $secondary-bgc;
   border-radius: 1rem;
-  box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 10%);
+  box-shadow: 0px 0px 10px 10px $shadow-blue;
+
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .avatar-image {
   width: 50px;
-  height: auto;
+  height: 50px;
+  border: 2px solid $secondary-color;
   border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .turbo-progress-bar {
@@ -48,8 +58,6 @@ body {
 }
 
 .links {
-  margin-top: 0.5rem;
-  // text-align: center;
 
   a {
     color: $primary-color;
@@ -69,9 +77,9 @@ body {
 }
 
 .alert {
-  color: $danger-color;
+  color: $attention-color;
 }
 
 .errors {
-  color: $danger-color;
+  color: $attention-color;
 }
