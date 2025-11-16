@@ -148,6 +148,144 @@
           null,
           1,
           null
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/admin/dashboard_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/admin/roles_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/admin/user_imports_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/admin/users_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
         ],
         "branches": {}
       },
@@ -379,6 +517,117 @@
         }
       },
       "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/jobs/application_job.rb": {
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/home_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/controllers/users_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/admin/dashboard_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/admin/roles_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/admin/user_imports_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/admin/users_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/application_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/home_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/helpers/users_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/jobs/application_job.rb": {
         "lines": [
           0,
           null,
@@ -398,8 +647,81 @@
           0
         ],
         "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/models/user.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
+      },
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+      "/home/ivan-pagani/repos/Rails_Projects/umanni-test-fullstack-developer/app/services/csv_import_users_service.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {}
       }
     },
     "timestamp": 1763331781
+    "timestamp": 1763319144
   }
 }

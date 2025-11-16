@@ -97,6 +97,10 @@ docker compose up -d
 
 App will be running at:
 http://localhost:3000
+| devise | Authentication and user management |
+| dart-sass-rails | SASS and SCSS compiler for Rails asset pipeline |
+| image_processing | Image resizing and transformations (used with Active Storage) |
+| rubocop | Enforces code best practices |
 
 ---
 

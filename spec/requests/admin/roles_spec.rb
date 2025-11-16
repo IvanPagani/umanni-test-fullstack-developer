@@ -13,4 +13,11 @@ RSpec.describe "Admin::Roles", type: :request do
       expect(response).to redirect_to(admin_users_path)
     end
   end
+  describe "GET /update" do
+    it "returns http success" do
+      get "/admin/roles/update"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end

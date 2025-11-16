@@ -113,4 +113,43 @@ RSpec.describe "Admin::UsersController", type: :request do
       expect(response).to redirect_to(admin_users_path)
     end
   end
+
+  describe "PATCH /admin/users/:id/toggle_role" do
+    it "toggles admin role" do
+      sign_in admin
+
+      patch toggle_role_admin_user_path(user)
+      expect(user.reload.admin).to eq(true)
+      expect(response).to redirect_to(admin_users_path)
+    end
+  end
+
+  describe "POST /admin/users/import" do
+    it "accepts CSV file" do
+      sign_in admin
+      file = fixture_file_upload("users.csv", "text/csv")
+      post import_admin_users_path, params: { file: file }
+
+      expect(response).to redirect_to(admin_users_path)
+      expect(flash[:notice]).to eq("File imported successfully.")
+    end
+
+    it "rejects blank file" do
+      sign_in admin
+
+      post import_admin_users_path, params: { file: nil }
+
+      expect(response).to redirect_to(admin_users_path)
+      expect(flash[:alert]).to eq("Please choose a file to upload.")
+    end
+
+    it "rejects wrong file type" do
+      sign_in admin
+      file = fixture_file_upload("not_csv.txt", "text/plain")
+      post import_admin_users_path, params: { file: file }
+
+      expect(response).to redirect_to(admin_users_path)
+      expect(flash[:alert]).to eq("Only CSV files are allowed.")
+    end
+  end
 end
