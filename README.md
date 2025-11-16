@@ -36,10 +36,67 @@ This project was developed as part of the **Umanni Fullstack Developer Test**.
 
 | Gem | Purpose |
 |-----|---------|
-| devise | Authentication and user management |
-| dart-sass-rails | SASS and SCSS compiler for Rails asset pipeline |
-| image_processing | Image resizing and transformations (used with Active Storage) |
-| rubocop | Enforces code best practices |
+| devise | User authentication |
+| dart-sass-rails | SCSS compilation |
+| image_processing | ActiveStorage image transformations |
+| rubocop | Code linting |
+| rspec-rails | Testing framework |
+| factory_bot_rails | Factories for tests |
+| faker | Fake data for tests |
+| csv | Import CSV files |
+| kaminari | Pagination |
+
+---
+
+## Running the App (Local)
+
+### 1. Install dependencies
+```bash
+bundle install
+```
+
+### 2. Set up the database
+```bash
+rails db:create db:migrate
+```
+
+### 3. Seed Admin User
+```bash
+rails db:seed
+```
+
+| email | password |
+|------|---------|
+| `admin@umanni.test` | `admin123` |
+
+### 4. Start the server
+```bash
+bin/dev
+
+or
+
+bin/rails s
+```
+
+App will be running at:
+http://localhost:3000
+
+---
+
+## Running the App with Docker
+
+### 1. Build the containers
+```bash
+docker compose build
+```
+
+### 2. Start the containers
+```bash
+docker compose up -d
+```
+
+App will be running at:
+http://localhost:3000
 
 ---
 
